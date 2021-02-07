@@ -1,0 +1,40 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %} New TruckZhazgul {% endblock %}
+
+{% block header %}
+    Show data from data base
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ truck_zhazgul.id }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ truck_zhazgul.model }}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{ truck_zhazgul.year }}</td>
+            </tr>
+            <tr>
+                <th>Owner</th>
+                <td>{{ truck_zhazgul.owner }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ truck_zhazgul.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+     <a href="{{ path('truck_zhazgul_index') }}">back to list</a> 
+     <br>
+    <a href="{{ path('truck_zhazgul_edit', {'id': truck_zhazgul.id}) }}">edit</a> 
+
+    {{ include('truck_zhazgul/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %}Hello ZhazgulKadyrbekovaController!{% endblock %}
+
+{% block header %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ info[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>{{ info[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Student number </td>
+                        <td>{{ info[2] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Faculty</td>
+                        <td>{{ info[3] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>{{ info[4] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Grade</td>
+                        <td>{{ info[5] }}</td>
+                    </tr>
+                </table>
+{% endblock %}

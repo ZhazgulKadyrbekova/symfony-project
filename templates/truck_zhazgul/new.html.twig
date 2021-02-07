@@ -1,0 +1,14 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %} New TruckZhazgul {% endblock %}
+
+{% block header %}
+    Add data to data base
+{% endblock %}
+
+{% block content %}
+
+    {{ include('truck_zhazgul/_form.html.twig') }}
+
+    <a href="{{ path('truck_zhazgul_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %} Edit TruckZhazgul {% endblock %}
+
+{% block header %}
+    Update data in data base
+{% endblock %}
+
+{% block content %}
+    
+    {{ include('truck_zhazgul/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('truck_zhazgul_index') }}">back to list</a>
+
+    {{ include('truck_zhazgul/_delete_form.html.twig') }}
+    
+{% endblock %}

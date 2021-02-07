@@ -1,0 +1,47 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %} New TruckZhazgul {% endblock %}
+
+{% block header %}
+    Show data from data base
+{% endblock %}
+
+
+{% block content %}
+  
+    <form action={{ path("search_id") }} method='POST'>
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action={{ path("search_model") }} method='POST'>
+        <label for="model">Model:</label><br>
+        <input type="text" id="model" name="model"><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <form action={{ path("search_year") }} method='POST'>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year"><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <form action={{ path("search_owner") }} method='POST'>
+        <label for="owner">Owner:</label><br>
+        <input type="text" id="owner" name="owner"><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <form action={{ path("search_price") }} method='POST'>
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price"><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+{% endblock %}
+

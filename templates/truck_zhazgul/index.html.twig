@@ -1,0 +1,44 @@
+{% extends 'zhazgul.base.html.twig' %}
+
+{% block title %} TruckZhazgul index {% endblock %}
+
+{% block header %}
+    Data base operations
+{% endblock %}
+
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Owner</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for truck_zhazgul in truck_zhazguls %}
+            <tr>
+                <td>{{ truck_zhazgul.id }}</td>
+                <td>{{ truck_zhazgul.model }}</td>
+                <td>{{ truck_zhazgul.year }}</td>
+                <td>{{ truck_zhazgul.owner }}</td>
+                <td>{{ truck_zhazgul.price }}</td>
+                <td>
+                    <a href="{{ path('truck_zhazgul_show', {'id': truck_zhazgul.id}) }}">show</a>
+                    <a href="{{ path('truck_zhazgul_edit', {'id': truck_zhazgul.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+     <a href="{{ path('truck_zhazgul_new') }}">Create new</a>
+{% endblock %}
